@@ -20,6 +20,10 @@ None
 
 ## Available states
 
+### time
+
+Setting general settings like system's timezone
+
 ### time.ntpd
 
 Install and configure ntpd

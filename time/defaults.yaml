@@ -1,5 +1,9 @@
 {% load_yaml as rawmap %}
 Debian:
+  general:
+    set_timezone: True
+    timezone: Europe/Berlin
+    utc: True
   ntpd:
     ensure: running
     servicename: ntp
