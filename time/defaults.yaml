@@ -9,4 +9,7 @@ Debian:
     template_path: salt://time/ntpd/etc/ntp.conf
     pkgs:
       - ntp
+  ntpdate:
+    pkgs:
+      - ntpdate
 {% endload %}

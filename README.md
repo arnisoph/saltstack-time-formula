@@ -24,6 +24,10 @@ None
 
 Install and configure ntpd
 
+### time.ntpdate
+
+Install ntpdate
+
 ## Additional resources
 
 None
