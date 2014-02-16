@@ -6,8 +6,9 @@ Debian:
     utc: True
   ntpd:
     ensure: running
-    servicename: ntp
-    service_enable: True
+    service:
+      name: ntp
+      enable: True
     configure: False
     path: /etc/ntp.conf
     template_path: salt://time/ntpd/etc/ntp.conf

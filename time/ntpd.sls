@@ -10,8 +10,8 @@ ntpd:
 {% endfor %}
   service:
     - {{ datamap['ntpd']['ensure'] }}
-    - name: {{ datamap['ntpd']['servicename'] }}
-    - enable: {{ datamap['ntpd']['service_enable'] }}
+    - name: {{ datamap['ntpd']['service']['name'] }}
+    - enable: {{ datamap['ntpd']['service']['enable'] }}
     - require:
       - pkg: ntpd
 {% if datamap['ntpd']['configure'] %}
