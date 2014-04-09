@@ -5,21 +5,21 @@ ntpd:
   pkg:
     - installed
     - pkgs:
-{% for p in datamap['ntpd']['pkgs'] %}
+{% for p in datamap.ntpd.pkgs %}
       - {{ p }}
 {% endfor %}
   service:
-    - {{ datamap['ntpd']['ensure'] }}
-    - name: {{ datamap['ntpd']['service']['name'] }}
-    - enable: {{ datamap['ntpd']['service']['enable'] }}
+    - {{ datamap.ntpd.ensure }}
+    - name: {{ datamap.ntpd.service.name }}
+    - enable: {{ datamap.ntpd.service.enable }}
     - require:
       - pkg: ntpd
-{% if datamap['ntpd']['configure'] %}
+{% if datamap.ntpd.configure %}
       - file: ntpd
   file:
     - managed
-    - name: {{ datamap['ntpd']['path'] }}
-    - source: {{ datamap['ntpd']['template_path'] }}
+    - name: {{ datamap.ntpd.path }}
+    - source: {{ datamap.ntpd.template_path }}
     - mode: '0644'
     - user: root
     - group: root
