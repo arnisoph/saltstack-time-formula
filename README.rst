@@ -47,6 +47,11 @@ Additional resources
 
 None
 
+Templates
+=========
+
+Some states/ commands may refer to templates which aren't included in the files folder (``time/files``). Take a look at ``contrib/`` (if present) for e.g. template examples and place them in separate file roots (e.g. Git repository, refer to `GitFS <http://docs.saltstack.com/topics/tutorials/gitfs.html>`_) in your Salt master config.
+
 Formula Dependencies
 ====================
 
@@ -67,12 +72,12 @@ Salt Compatibility
 
 Tested with:
 
-* 2014.1.3
+* 2014.1.4
 
 OS Compatibility
 ================
 
 Tested with:
 
-* GNU/ Linux Debian Wheezy 7.5
-* CentOS 6.5
+* GNU/ Linux Debian Wheezy
+* CentOS 6

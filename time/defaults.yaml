@@ -1,35 +1,19 @@
 {% load_yaml as rawmap %}
 Debian:
-  general:
-    set_timezone: True
-    timezone: Europe/Berlin
-    utc: True
+  general: {}
   ntpd:
-    ensure: running
     service:
       name: ntp
-      enable: True
-    configure: False
-    path: /etc/ntp.conf
-    template_path: salt://time/ntpd/etc/ntp.conf
     pkgs:
       - ntp
   ntpdate:
     pkgs:
       - ntpdate
 RedHat:
-  general:
-    set_timezone: True
-    timezone: Europe/Berlin
-    utc: True
+  general: {}
   ntpd:
-    ensure: running
     service:
       name: ntpd
-      enable: True
-    configure: False
-    path: /etc/ntp.conf
-    template_path: salt://time/ntpd/etc/ntp.conf
     pkgs:
       - ntp
   ntpdate:

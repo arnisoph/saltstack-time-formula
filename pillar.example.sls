@@ -1,5 +1,7 @@
 time:
   lookup:
     ntpd:
-      configure: True
-      template_path: salt://override/time/ntpd/etc/ntp.conf
+      template_path: salt://override/time/files/ntp.conf
+      servers:
+        - 1.de.pool.ntp.org
+        - 3.de.pool.ntp.org
