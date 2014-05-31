@@ -23,7 +23,7 @@ ntpd:
     - managed
     - name: {{ datamap.ntpd.path|default('/etc/ntp.conf') }}
     - source: {{ datamap.ntpd.template_path|default('salt://time/files/ntp.conf') }}
-    - mode: '0644'
+    - mode: 644
     - user: root
     - group: root
     - template: jinja
