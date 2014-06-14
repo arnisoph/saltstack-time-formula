@@ -6,7 +6,4 @@
 ntpdate:
   pkg:
     - installed
-    - pkgs:
-{% for p in datamap.ntpdate.pkgs %}
-      - {{ p }}
-{% endfor %}
+    - pkgs: {{ datamap.ntpdate.pkgs|default([]) }}

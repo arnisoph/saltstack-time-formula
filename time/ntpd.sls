@@ -6,10 +6,7 @@
 ntpd:
   pkg:
     - installed
-    - pkgs:
-{% for p in datamap.ntpd.pkgs %}
-      - {{ p }}
-{% endfor %}
+    - pkgs: {{ datamap.ntpd.pkgs|default([]) }}
   service:
     - {{ datamap.ntpd.ensure|default('running') }}
     - name: {{ datamap.ntpd.service.name }}
