@@ -11,11 +11,7 @@ ntpd:
     - {{ datamap.ntpd.ensure|default('running') }}
     - name: {{ datamap.ntpd.service.name }}
     - enable: {{ datamap.ntpd.service.enable|default(True) }}
-    - require:
-      - pkg: ntpd
-    - watch:
 {% if datamap.ntpd.configure|default(True) %}
-      - file: ntpd
   file:
     - managed
     - name: {{ datamap.ntpd.path|default('/etc/ntp.conf') }}
@@ -24,4 +20,6 @@ ntpd:
     - user: root
     - group: root
     - template: jinja
+    - watch:
+      - service: ntpd
 {% endif %}
