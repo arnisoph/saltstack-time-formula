@@ -3,7 +3,7 @@ time-formula
 ============
 
 .. image:: https://api.flattr.com/button/flattr-badge-large.png
-    :target: https://flattr.com/submit/auto?user_id=bechtoldt&url=https%3A%2F%2Fgithub.com%2Fbechtoldt%2Ftime-formula
+    :target: https://flattr.com/submit/auto?user_id=bechtoldt&url=https%3A%2F%2Fgithub.com%2Fbechtoldt%2Fsaltstack-time-formula
 
 Salt Stack Formula to set up and configure time relatated software and system settings
 
