@@ -20,6 +20,6 @@ ntpd:
     - user: root
     - group: root
     - template: jinja
-    - watch:
+    - watch_in:
       - service: ntpd
 {% endif %}
